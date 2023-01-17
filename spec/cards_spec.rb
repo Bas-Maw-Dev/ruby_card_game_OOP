@@ -1,4 +1,4 @@
-require_relative '../cards'
+require_relative '../lib/deck'
 
 describe 'Card' do
   it 'can read a cards value' do
@@ -11,6 +11,5 @@ describe 'Deck' do
   it 'can pick a card from the deck' do
     c = Deck.new.draw
     expect(c).to be_a Card 
-
   end
 end
