@@ -1,12 +1,22 @@
 class Card
-  attr_accessor :number, :suit
+  attr_accessor :suit
 
-  def initialize(number, suit)
-    @number = number
+  def initialize(value, suit)
+    @value = value
     @suit = suit
   end
 
   def card
-    "#{@number} #{@suit}"
+    "#{@value} #{@suit}"
+  end
+
+  def value
+    case @value
+    when 1 then :ace
+    when 11 then :jack
+    when 12 then :queen
+    when 13 then :king
+    else @value
+    end
   end
 end
