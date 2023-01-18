@@ -9,13 +9,16 @@ class Card
   def card
     "#{@value} #{@suit}"
   end
-
+  
+  def to_s
+    "|#{value}-#{@suit}|"
+  end
   def value
     case @value
-    when 1 then :ace
-    when 11 then :jack
-    when 12 then :queen
-    when 13 then :king
+    when 1 then :A
+    when 11 then :J
+    when 12 then :Q
+    when 13 then :K
     else @value
     end
   end
