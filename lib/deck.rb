@@ -2,7 +2,7 @@ require_relative './cards'
 
 class Deck
   def initialize
-    spades = (1..13).map { |value| Card.new(value, :spades) }
+    spades = Card.build(:spades)
     @cards = spades.shuffle
   end
 

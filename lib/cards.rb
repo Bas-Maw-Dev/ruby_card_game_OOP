@@ -19,4 +19,8 @@ class Card
     else @value
     end
   end
+
+  def self.build(suit)
+    (1..13).map { |value| Card.new(value, suit) }
+  end
 end
