@@ -1,4 +1,5 @@
 class Card
+  include Comparable
   attr_accessor :suit
 
   def initialize(value, suit)
@@ -12,6 +13,10 @@ class Card
 
   def to_s
     "|#{value}-#{@suit}|"
+  end
+
+  def <=>(other)
+    value <=> other.value
   end
 
   def value

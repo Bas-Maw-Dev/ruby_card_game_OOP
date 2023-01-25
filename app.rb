@@ -1,5 +1,16 @@
-require_relative "./lib/deck"
+require_relative './lib/deck'
 
-card = Deck.new.draw
+deck = Deck.new
 
-puts "#{card} "
+card1 = deck.draw 
+card2 = deck.draw 
+
+
+puts "#{card1} "
+puts "#{card2} "
+
+if card1 > card2
+  puts "#{card1} wins"
+else
+  puts "#{card2} wins"
+end
