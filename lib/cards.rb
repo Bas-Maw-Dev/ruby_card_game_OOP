@@ -9,10 +9,11 @@ class Card
   def card
     "#{@value} #{@suit}"
   end
-  
+
   def to_s
     "|#{value}-#{@suit}|"
   end
+
   def value
     case @value
     when 1 then :A
@@ -26,4 +27,9 @@ class Card
   def self.build(suit)
     (1..13).map { |value| Card.new(value, suit) }
   end
+
+  protected
+
+  attr_reader :value
+
 end
