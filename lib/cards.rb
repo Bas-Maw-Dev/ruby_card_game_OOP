@@ -12,14 +12,14 @@ class Card
   end
 
   def to_s
-    "|#{value}-#{@suit}|"
+    "|#{human_value}-#{@suit}|"
   end
 
   def <=>(other)
     value <=> other.value
   end
 
-  def value
+  def human_value
     case @value
     when 1 then :A
     when 11 then :J
