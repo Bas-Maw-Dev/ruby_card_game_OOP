@@ -29,10 +29,6 @@ class Card
     end
   end
 
-  def self.build(suit)
-    (1..13).map { |value| Card.new(value, suit) }
-  end
-
   protected
 
   attr_reader :value
