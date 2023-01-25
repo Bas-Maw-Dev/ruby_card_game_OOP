@@ -2,6 +2,21 @@ class Card
   include Comparable
   attr_accessor :suit
 
+  HUMAN_VALUES = {
+    1 => :A,
+    2 => 2,
+    3 => 3,
+    4 => 4,
+    5 => 5,
+    6 => 6,
+    7 => 7,
+    8 => 8,
+    9 => 9,
+    10 => 10,
+    11 => :J,
+    12 => :Q,
+    13 => :K
+  }
   def initialize(value, suit)
     @value = value
     @suit = suit
@@ -20,13 +35,7 @@ class Card
   end
 
   def human_value
-    case @value
-    when 1 then :A
-    when 11 then :J
-    when 12 then :Q
-    when 13 then :K
-    else @value
-    end
+    HUMAN_VALUES[value]
   end
 
   protected
